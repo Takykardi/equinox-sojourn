@@ -6,6 +6,7 @@
 ////////////////////////////
 */
 
+// Taur sprites are now a subtype of tail since they are mutually exclusive anyway.
 // Begin Equinox edit. Un-comments this entire file.
 
 /datum/sprite_accessory/tail/taur
