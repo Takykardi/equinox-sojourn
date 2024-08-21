@@ -44,7 +44,7 @@
 ///////////////////////////////////////Mar'qua perks
 /datum/perk/suddenbrilliance
 	name = "Sudden Brilliance"
-	desc = "Your intelligence is above the 'lesser races' and even the humblest of Mar'qua can prove it easily in moments of focus. Use this to center your thoughts and increase all your mental abilities."
+	desc = "Use this to center your thoughts and increase all your mental abilities." //Equinox edit. Removed rather... problematic phrasing from marqua perks.
 	icon_state = "suddenbrilliance"
 	active = FALSE
 	passivePerk = FALSE
@@ -69,7 +69,7 @@
 
 /datum/perk/alien_nerves
 	name = "Adapted Nervous System"
-	desc = "A mar'qua's nervous system has long since adapted to the use of stimulants, chemicals, and different toxins. Unlike lesser races, you can handle a wide variety of chemicals before showing any side effects and you'll never become addicted."
+	desc = "A mar'qua's nervous system has long since adapted to the use of stimulants, chemicals, and different toxins. You can handle a wide variety of chemicals before showing any side effects and you'll never become addicted." //Equinox edit. Calm down, Sojourn.
 	icon_state = "adaptednervoussystem"
 
 /datum/perk/alien_nerves/assign(mob/living/L)
@@ -103,7 +103,7 @@
 	if(world.time < cooldown_time)
 		to_chat(usr, SPAN_NOTICE("The human body can only take so much, you'll need more time before you've recovered enough to use this again."))
 		return FALSE
-	cooldown_time = world.time + 10 MINUTES
+	cooldown_time = world.time + 30 MINUTES
 	user.visible_message("[user] grits their teeth and begins breathing slowly.", "You grit your teeth and remind yourself you ain't got time to bleed!")
 	log_and_message_admins("used their [src] perk.")
 	user.reagents.add_reagent("adrenol", 5)
@@ -124,7 +124,7 @@
 	if(world.time < cooldown_time)
 		to_chat(usr, SPAN_NOTICE("You cannot muster the willpower to have a heroic moment just yet."))
 		return FALSE
-	cooldown_time = world.time + 30 MINUTES
+	cooldown_time = world.time + 10 MINUTES
 	log_and_message_admins("used their [src] perk.")
 	for(var/mob/living/carbon/human/H in view(user))
 		if(H != user && !isdeaf(H))
