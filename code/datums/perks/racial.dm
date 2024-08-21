@@ -59,7 +59,7 @@
 	cooldown_time = world.time + 25 MINUTES
 	user.visible_message("[user] suddenly looks lost in thought, their focus elsewhere for a moment.", "You clear your mind and feel your thoughts focusing into a single stream of brilliance.", "You hear the calming silence, as if someone nearby is thinking deeply.")
 	log_and_message_admins("used their [src] perk.")
-	user.reagents.add_reagent("marquatol", 10)
+	user.reagents.add_reagent("marquatol", 5)
 	return ..()
 
 /datum/perk/inspired
@@ -106,7 +106,7 @@
 	cooldown_time = world.time + 30 MINUTES
 	user.visible_message("[user] grits their teeth and begins breathing slowly.", "You grit your teeth and remind yourself you ain't got time to bleed!")
 	log_and_message_admins("used their [src] perk.")
-	user.reagents.add_reagent("adrenol", 5)
+	user.reagents.add_reagent("adrenol", 3) //Enough to get you out of danger or towards medical.
 	return ..()
 
 /datum/perk/battlecry
