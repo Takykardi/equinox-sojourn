@@ -124,7 +124,7 @@
 	if(world.time < cooldown_time)
 		to_chat(usr, SPAN_NOTICE("You cannot muster the willpower to have a heroic moment just yet."))
 		return FALSE
-	cooldown_time = world.time + 10 MINUTES
+	cooldown_time = world.time + 30 MINUTES
 	log_and_message_admins("used their [src] perk.")
 	for(var/mob/living/carbon/human/H in view(user))
 		if(H != user && !isdeaf(H))
